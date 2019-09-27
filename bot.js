@@ -39,9 +39,9 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 #bc  | لأرسال برود كاست للونلاين
-
-اذا بدك رابط البوت 15 الف 
-
+--
+اذا بدك رابط البوت 15 الف
+--
 تعال خاص ----> @Anwar#2279 
        ** `)
    message.author.sendEmbed(embed)
