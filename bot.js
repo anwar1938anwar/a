@@ -16,6 +16,20 @@ client.on("message", message => {
 });
 
 
+  client.on("message", message => {
+    if (message.content === "#help") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#00FF00")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`**Help|هيلب
+
+       $bc  |  لأرسال برود كاست للونلاين
+       ** `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : i1Suhaib`);
