@@ -16,14 +16,29 @@ client.on("message", message => {
 });
 
 
+//bc
+
+client.on("message", message => {
+    if (message.content.startsWith("#obc")) {
+                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' ');
+  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
+  m.send(`${argresult}\n ${m}`);
+  })
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.delete();
+  };
+  });
+
+
   client.on("message", message => {
-    if (message.content === "#help1") {
+    if (message.content === "#123") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-
-       $bc  |  لأرسال برود كاست للونلاين
+$bc  |  لأرسال برود كاست للونلاين
        ** `)
    message.author.sendEmbed(embed)
    
