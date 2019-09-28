@@ -38,11 +38,8 @@ client.on("message", message => {
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-#bc  | لأرسال برود كاست للونلاين
---
-اذا بدك رابط البوت 15 الف
---
-تعال خاص ----> @Anwar#2279 
+#bc   ----> لأرسال برود كاست للونلاين
+#obc  ----> لارسال  برود كاست  للجميع
        ** `)
    message.author.sendEmbed(embed)
    
