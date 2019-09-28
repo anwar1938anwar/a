@@ -31,9 +31,14 @@ client.on("message", message => {
   };
   });
 
+ client.on('message', msg => {
+    if(msg.content === '#help')
+    msg.reply('Check Your DM :white_check_mark:')
+  })
+
 
   client.on("message", message => {
-    if (message.content === "#123") {
+    if (message.content === "#help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
@@ -45,6 +50,7 @@ client.on("message", message => {
    
    }
    });
+
 
 client.on('ready', () => {
    console.log(`----------------`);
